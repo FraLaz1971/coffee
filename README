@@ -1,0 +1,62 @@
+########################
+### linux instruction
+########################
+
+#to run on msys2 bash terminal
+make -f  Makefile.lnx
+#to remove generated files
+make -f  Makefile.lnx clean
+#to run the program
+./coffee
+
+########################
+### msys2 instruction
+########################
+
+#to run on msys2 bash terminal
+make -f  Makefile.msys
+#to remove generated files
+make -f  Makefile.msys clean
+#to run the program
+./coffee.exe
+
+### also you can compile for msys2
+### directly on the command line
+### you need to have /usr/bin in the PATH env. var. list of paths
+gcc coffee.c -o coffee.exe
+###
+
+########################
+### cmd instruction
+########################
+
+#to run on cmd win terminal
+make -f  Makefile.mingw
+#to remove generated files
+make -f  Makefile.mingw clean
+#to run the program
+.\coffee.exe
+
+### you need to have C:\Dev-Cpp\bin in the PATH env. var. list of paths
+### or wherever else you have the MinGW you want to use 
+### like in C:\MinGW\bin or
+### C:\msys64\mingw64\bin
+### using MS win style syntax
+gcc coffee.c -o coffee.exe
+###
+### if you are in doubt of which gcc you are using
+### you can also put the complete specific name like
+x86_64-w64-mingw32-gcc.exe coffee.c -o coffee.exe
+## this will avoid you errors
+## after having installed gnu make on your msys2, the mingw one,
+## see it with 
+pacman -Qs make
+## for MS win 64bit msys2 installation the package should be called
+## mingw-w64-x86-64-make
+## after settings PATH including C:\msys64\mingw64\bin 
+## (pay attention to conflicts)
+## you can compile with
+mingw32-make -f Makefile.mingw-w64
+## remove created files
+mingw32-make -f Makefile.mingw-w64 clean
+

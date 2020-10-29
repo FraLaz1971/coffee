@@ -1,0 +1,28 @@
+# Project: coffee
+# Makefile created by Dev-C++ 4.9.9.2
+# and modified by fralaz1971
+
+CC   = /usr/bin/gcc.exe
+OBJ  = coffee.o
+LINKOBJ  = coffee.o
+LIBS =  -L.  -g3
+INCS =  -I.
+CXXINCS =  -I.  -Iinclude
+BIN  = coffee.exe
+CXXFLAGS = $(CXXINCS)   -g
+CFLAGS = $(INCS)   -g
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before coffee.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o coffee.exe $(LIBS)
+
+coffee.o: coffee.c
+	$(CC) -c coffee.c -o coffee.o $(CFLAGS)
