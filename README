@@ -9,9 +9,9 @@ make -f  Makefile.lnx clean
 #to run the program
 ./coffee
 
-########################
-### msys2 instruction
-########################
+############################
+### MS Win msys2 instruction
+############################
 
 #to run on msys2 bash terminal
 make -f  Makefile.msys
@@ -26,9 +26,9 @@ make -f  Makefile.msys clean
 gcc coffee.c -o coffee.exe
 ###
 
-########################
-### cmd instruction
-########################
+##########################
+### MS win cmd instruction
+##########################
 
 #to run on cmd win terminal
 make -f  Makefile.mingw
