@@ -2,7 +2,7 @@
 ### linux instruction
 ########################
 
-#to run on msys2 bash terminal
+#to run on linux bash terminal
 make -f  Makefile.lnx
 #to remove generated files
 make -f  Makefile.lnx clean
